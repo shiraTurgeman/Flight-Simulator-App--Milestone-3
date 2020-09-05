@@ -1,0 +1,173 @@
+﻿<UserControl x:Class="FlightSimulatorApp.View.DashBoard"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" Width="1000">
+
+    <Grid TextBlock.FontFamily="16"  Margin="20,230,751,-6" OpacityMask="Black">
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="43*" />
+            <ColumnDefinition Width="64*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+
+        <TextBlock  Grid.Row="7" Grid.Column="00" Grid.ColumnSpan="3" Margin="-4,13.6,9.8,-43.4" FontWeight="Bold" Text="{Binding  VM_ErrorMessage, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>
+        </TextBlock>
+
+
+
+
+
+        <TextBlock Padding="3" Margin="-4,28.8,10.2,0.2" FontWeight="Bold" Grid.RowSpan="4" Text="Heading" OpacityMask="Black" Grid.Row="1">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>
+
+        </TextBlock>
+        <TextBlock Padding="3" Margin="113,28.8,10,0.2"  FontWeight="Bold" Text="{Binding  VM_Heading, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Grid.RowSpan="4" Grid.ColumnSpan="3" OpacityMask="Black" Grid.Row="1">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock Padding="3" Margin="-4,27.8,10.2,0.4" FontWeight="Bold" OpacityMask="Black" Grid.Row="3">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>Altimeter Alttitude</TextBlock>
+        <TextBlock Padding="3" Margin="113,27.8,10,0.4"  FontWeight="Bold" Text="{Binding  VM_Altimeter, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="3" OpacityMask="Black" Grid.Row="3">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock Padding="3" Margin="-4,60.8,10.2,0.2"  FontWeight="Bold" OpacityMask="Black" Grid.Row="3" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>Roll Alttitude</TextBlock>
+        <TextBlock Padding="3" Margin="113,60.8,10,0.2"  FontWeight="Bold" Text="{Binding VM_Roll, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="3" OpacityMask="Black" Grid.Row="3" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock Padding="3" Margin="-4,87.8,10.2,0.2" FontWeight="Bold" OpacityMask="Black" Grid.Row="3" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>Pitch Alttitude</TextBlock>
+        <TextBlock Padding="3" Margin="113,87.8,10,0.2" FontWeight="Bold" Text="{Binding VM_Pitch, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="3" OpacityMask="Black" Grid.Row="3" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock Grid.Row="3" Padding="3" Margin="-4,114.8,10.2,0.2" FontWeight="Bold" OpacityMask="Black" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>GPS Alttitude</TextBlock>
+        <TextBlock Grid.Row="3" Padding="3" Margin="113,114.8,10,0.2" FontWeight="Bold" Text="{Binding  VM_Altitude ,Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="3" OpacityMask="Black" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock Grid.Row="3" Padding="3" Margin="-4,148.8,10.2,0.2" FontWeight="Bold" OpacityMask="Black" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>Air Speed</TextBlock>
+        <TextBlock Grid.Row="3" Padding="3" Margin="113,148.8,10,0.2" FontWeight="Bold" Text="{Binding  VM_AirSpeed,Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="3" OpacityMask="Black" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock Grid.Row="3" Padding="3" Margin="-4,169.8,10.2,0.2" FontWeight="Bold" OpacityMask="Black" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>Vertical Speed</TextBlock>
+        <TextBlock Grid.Row="3" Padding="3" Margin="113,169.8,10,0.2"  FontWeight="Bold" Text="{Binding  VM_VerticalSpeed, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="3" OpacityMask="Black" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock Grid.Row="3" Padding="3" Margin="-4,202.8,10.2,0.2"  FontWeight="Bold" Grid.RowSpan="2" >
+            <TextBlock.OpacityMask>
+                <SolidColorBrush Color="Black"/>
+            </TextBlock.OpacityMask>
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>Ground Speed</TextBlock>
+        <TextBlock Grid.Row="3" Padding="3" Margin="113,202.8,10,0.2"  FontWeight="Bold" Text="{Binding  VM_GroundSpeed, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="3" OpacityMask="Black" Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionTextColorKey}}"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </TextBlock.Background>
+        </TextBlock>
+
+
+    </Grid>
+</UserControl>
